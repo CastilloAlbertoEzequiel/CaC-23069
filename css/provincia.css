@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.menu-container{
+    /*background-color: bisque;*/  
+    margin-top: 50px;  
+    margin-bottom: 15px;
+    padding: 20px ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.menu-container_logo{
+    height: 50px;
+    width: 200px;
+    background-image: url(https://www.bancoprovincia.com.ar/CDN/Get/logo_2021_S);
+    background-repeat: no-repeat;
+}
+.menu-container_links{
+    display: flex;
+    align-items: center;
+}
+.links_left li{
+    list-style: none;
+    margin-left: 5px;
+    margin-right: 12px;
+}
+.links_left ul {
+    display: flex;
+}
+.link {
+    text-decoration: none;
+    color: #020202;
+}
+.link:hover{
+    text-decoration: none;
+    color: #615e5e82;
+}
+.links_right a {
+    padding: 5px 10px;
+    display: inline-block;
+    border: 1px solid black;    
+    border-radius: 5px 10px 5px 10px;
+}
+/*media query*/
+@media screen and (max-width: 576px){
+   
+    .menu-container_links{
+        /*flex-direction: column;
+        align-items: flex-start;
+        margin-top: 5px;
+        margin-bottom: 5px;*/
+        display: none;
+    }
+}
+/*media query*/
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    .menu-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 5px;
+    }
+    .menu-container_links{
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        /*display: none;*/
+}
+}

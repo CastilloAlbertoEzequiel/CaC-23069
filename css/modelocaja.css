@@ -1,0 +1,55 @@
+* {/*quitamos los margin y padding*/
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.container {
+    width: 300px;
+    background-color: aquamarine;
+    border: 5px solid black;
+    margin: 15px 25px;
+    padding: 15px 25px;
+
+    /*lo mismo con padding
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;*/
+
+    /*box-sizing: content-box*//*el widht y el height no incluyen el margin, padding y el border*/;
+    box-sizing: border-box;
+}
+/*los elementos inline no tienen alto y ancho lo tienen los elementos en bloque*/
+.containerV2 {
+    border: 1px solid red;
+    margin-left: 5px;
+    margin-right: 25px;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 2px; 
+}
+.containerV2 a {
+    display: block;
+    height: 50px;
+    width: 50px;
+    background-color:green ;
+    margin-bottom: 5px;
+    /*margin: 5px;*/
+}
+/*selector por atributo
+= exactamente igual
+^= comience con:
+*= contiene TAL COSA:
+$= termine con:
+*/
+a[href="http://www.google.com"] {
+    font-size: 30px;
+    height: 50px;
+    width: 80px;
+}
+
+ul > li[id^="li"]{
+    background-color: blue;
+    color: white;
+}

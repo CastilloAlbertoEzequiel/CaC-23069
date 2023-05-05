@@ -18,6 +18,8 @@
     --bs-danger: #dc3545;
     --bs-light: #f8f9fa;
     --bs-dark: #212529;
+    color: #EEEEEE;
+    color: #212121;
     
   }
   .navbar-nav {
@@ -81,82 +83,78 @@
 /*fin navbar*/
 
 /*main content*/
-.main-content {
-    
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: end;
-    background-image:url(../tp-integrador/imgs/ba1.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
+.section-container {
+    background-image: url(./imgs/ba1.jpg);
     background-size: cover;
-    height:100vh;
+    background-repeat: no-repeat;
+    height: 100vh ;
+    color: var(#EEEEEE);
+    background-position: center center;
 }
-.main-box-text {
+.section-main-container {
+    background-color: rgba(0, 0, 0, 0.55);
+    width: 100%;
+    height: 100%;
     
-    box-sizing: border-box;
+}
+.section-container-flex {
+    
+    margin-left: 50vh !important;
+    margin-right: 20vh !important;
+    height: 80%;
+    margin: 0 0;
     display: flex;
-    padding-right: 10vw;
-    padding-left: 50vw;
-    justify-content: center;
-    flex-direction: column;
-    height: inherit;
-    align-content: end;
+    justify-content: flex-end;
+    align-items: flex-end;
+    
+    
+}
+.section-content-container {
+    
+    width: 40vw;
+    margin-bottom: 5vh;
     text-align: right;
-    
-}
-.ConfsAsBs {
-    
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    font-weight: 450;
-    color: var(--bs-light);
-    text-align: end;
-}
-.conf-p {
-    color: white;
-    font-weight: 400;
-    text-align: end;
-}
-.main-buttons {
-display: flex;
-justify-content: flex-end;
-flex-wrap: wrap;
+    color: #EEEEEE;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
-.btn-outline-light {
-    padding: 5px !important;
-    margin-right: 5px;
-    font-weight: 500 !important;
-    flex-wrap: wrap;
-    --bs-btn-color: #ffffff;
-    --bs-btn-border-color: #ffffff;
-    --bs-btn-hover-color: #000;
-    --bs-btn-hover-bg: #ffffff;
-    --bs-btn-hover-border-color: #ffffff;
-    --bs-btn-focus-shadow-rgb: 248,249,250;
-    --bs-btn-active-color: #000;
-    --bs-btn-active-bg: ##ffffff;
-    --bs-btn-active-border-color: ##ffffff;
-    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: #ffffff;
-    --bs-btn-disabled-bg: transparent;
-    --bs-btn-disabled-border-color: #ffffff;
-    --bs-gradient: none;
-    
+.section-main-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
-.btn-success {
-    padding: 5px !important;
-    flex-wrap: wrap;
-    --bs-btn-bg: #0cc449 !important;
-    --bs-btn-border-color: #0cc449 !important;
-    --bs-btn-hover-bg: #0cc449 !important;
-    --bs-btn-hover-border-color: #0cc449 !important;
- }
- 
- 
+.section-main-buttons a {
+    
+    color: #EEEEEE ;
+    text-decoration: none;
+}
+.button {
+    padding: 1vh 1vw ;
+    margin: 1 vh ;
+    border-radius: 5px ;
+    text-align: center;
+}
+.button-transparent{
+    margin-right: 1vw;
+    border:1px solid #EEEEEE ;
+}
+.button.button-transparent:hover{
+    background-color: rgba(255, 255, 255, 0.55) ;
+    color: var(#212121) ;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    transition: 0.5s ;
+}
+.button.button-solid{
+background-color: green ;
+border: 1px solid green ;
+}
+.button.button-solid:hover {
+    background-color: rgba(0, 128, 0, 0.55) ;
+    color: var(#212121) ;
+    border: 1px solid rgba(0, 128, 0, 0.55);
+    transition: 0.5s ;
+}
 /*ORADORES Y CARDS*/
 .row {
     box-sizing: border-box !important;
@@ -231,7 +229,8 @@ article.card {
     flex-flow: wrap;
     justify-content: space-between;
 }
-/**/
+
+/*Zona playa*/
 .container-fluid {
     box-sizing: border-box;
     margin: 0 !important;
@@ -260,7 +259,7 @@ article.card {
 .playa-text p {
     font-size: 3vh;
 }
-/**/
+/*formulario*/
 .form-container {
     box-sizing: border-box;
    
@@ -287,7 +286,7 @@ text-decoration-style: dotted;
     margin-bottom: 1vh;
     font-size: 2vh;
 }
-/**/
+/*footer*/
 .container-footer {
     box-sizing: border-box;
     max-width: 100%;
@@ -328,46 +327,182 @@ text-decoration-style: dotted;
     flex-direction: column;
     flex-wrap: wrap;
 }
-
-@media screen and (min-width: 576px) and (max-width: 992px) {
-    
-    .main-box-text {
-        box-sizing: border-box;
+/*mediaquery*/
+@media (min-width: 768px) and (max-width: 1280px)  {
+    .section-container-flex {
+        
+        margin-left: 50vh !important;
+        margin-right: 20vh !important;
+        height: 80%;
+        margin: 0 0;
         display: flex;
-        padding-right: 5vw;
-        padding-left: 20vw;
-        justify-content: center;
+        justify-content: flex-end;
+        align-items: flex-end;
         flex-direction: column;
-        height: inherit;
-        align-content: end;
+    
+}
+    
+}
+@media (min-width: 320px) and (max-width: 767.98px)   {
+    
+    .section-container {
+        background-image: url(./imgs/ba1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh ;
+        color: var(#EEEEEE);
+        background-position: center center;
+        
+    }
+    .section-main-container {
+        background-color: rgba(0, 0, 0, 0.55);
+        width: 100%;
+        height: 100%;
+        
+    }
+    .section-container-flex {
+        
+        margin-left: 50vh !important;
+        margin-right: 10vh !important;
+        height: 80%;
+        margin: 0 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+       
+        
+    }
+    .section-content-container{
+        height: 60vh;
+    }
+    .section-content-container p {
+        
+        width: 40vw;
+        margin-bottom: 5vh;
         text-align: right;
+        color: #EEEEEE;
+        font-size: 2.5vh;
+    }
+    
+    .section-main-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+
         
     }
-    .ConfsAsBs {
-        
-        margin-top: 0;
-        margin-bottom: 0.5rem;
-        font-weight: 450;
-        color: var(--bs-light);
-        text-align: end;
+    .section-main-buttons a {
+        color: #EEEEEE ;
+        text-decoration: none;
     }
-    .conf-p {
-        color: white;
-        font-weight: 400;
-        text-align: end;
+    .button {
+        padding: 1vh 1vw ;
+        margin: 1 vh ;
+        border-radius: 5px ;
+        text-align: center;
+    }
+    .button-transparent{
+        font-size: 2vh;
+        border:1px solid #EEEEEE ;
+    }
+    .button.button-transparent:hover{
+        background-color: rgba(255, 255, 255, 0.55) ;
+        color: var(#212121) ;
+        border: 1px solid rgba(255, 255, 255, 0.55);
+        transition: 0.5s ;
+    }
+    .button.button-solid{
+        font-size: 2vh;
+    background-color: green ;
+    border: 1px solid green ;
+    }
+    .button.button-solid:hover {
+        background-color: rgba(0, 128, 0, 0.55) ;
+        color: var(#212121) ;
+        border: 1px solid rgba(0, 128, 0, 0.55);
+        transition: 0.5s ;
     }
 }
-@media screen and (min-width: 576px) {
-    .ConfsAsBs {
-        margin-top: 0;
-        margin-bottom: 0.5rem;
-        font-size: 6vh;
-        color: var(--bs-light);
-        text-align: end;
+
+@media (min-width: 100px) and (max-width: 319.98px)   {
+    
+    .section-container {
+        background-image: url(./imgs/ba1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh ;
+        color: var(#EEEEEE);
+        background-position: center center;
+        
     }
-    .conf-p {
-        color: white;
-        font-size: 3vh;
-        text-align: end;
+    .section-main-container {
+        background-color: rgba(0, 0, 0, 0.55);
+        width: 100%;
+        height: 100%;
+        
+    }
+    .section-container-flex {
+        
+        margin-left: 50vh !important;
+        margin-right: 10vh !important;
+        height: 80%;
+        margin: 0 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+       
+        
+    }
+    .section-content-container{
+        height: 60vh;
+    }
+    .section-content-container h1{
+        font-size: 5vh;
+    }
+    .section-content-container p {
+        
+        width: 40vw;
+        margin-bottom: 5vh;
+        text-align: right;
+        color: #EEEEEE;
+        font-size: 2.5vh;
+    }
+    
+    .section-main-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+  
+    }
+    .section-main-buttons a {
+        color: #EEEEEE ;
+        text-decoration: none;
+    }
+    .button {
+        padding: 1vh 1vw ;
+        margin: 1 vh ;
+        border-radius: 5px ;
+        text-align: center;
+    }
+    .button-transparent{
+        font-size: 2vh;
+        border:1px solid #EEEEEE ;
+    }
+    .button.button-transparent:hover{
+        background-color: rgba(255, 255, 255, 0.55) ;
+        color: var(#212121) ;
+        border: 1px solid rgba(255, 255, 255, 0.55);
+        transition: 0.5s ;
+    }
+    .button.button-solid{
+        font-size: 2vh;
+    background-color: green ;
+    border: 1px solid green ;
+    }
+    .button.button-solid:hover {
+        background-color: rgba(0, 128, 0, 0.55) ;
+        color: var(#212121) ;
+        border: 1px solid rgba(0, 128, 0, 0.55);
+        transition: 0.5s ;
     }
 }
